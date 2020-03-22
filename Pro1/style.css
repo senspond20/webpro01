@@ -1,0 +1,9 @@
+h1{
+    text-align: center;
+    margin-top:230px;
+    font-size:90px;
+}
+
+h1 span:nth-child(1){
+    color: blue
+}
