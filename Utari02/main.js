@@ -19,7 +19,6 @@ function menu_view(viewid){
     }
 }
 
-
 /*   function menu_hide(hideid){
         document.getElementById("submenu"+hideid).style.display="none";
         old_viewid = 0;
