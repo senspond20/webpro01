@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .toggle_button {
+            cursor:pointer;
+            display:block;
+            background:#eee;
+            text-align:center;
+            border:1px solid #ccc;
+        }
+        #toggle_button,
+        #toggle_contents {
+            height:0;
+            overflow:hidden;
+            position:absolute;
+        }
+        #toggle_button:checked + #toggle_contents {
+            height:auto;
+            position:relative;
+            border:1px solid #ccc;
+            border-top:0;
+            padding:10px;
+        }
+      /*  .close_button {
+            cursor:pointer;
+            position:absolute;
+            top:5px;
+            right:5px;
+            padding:3px;
+            font-size:10px;
+            line-height:1;
+            background:#555;
+            color:#fff;
+        }*/
+
+    </style>
+</head>
+<body>
+    <label class="toggle_button" for="toggle_button">toggle button</label>
+    <input id="toggle_button" type="checkbox">
+    <div id="toggle_contents">
+        Contents
+        <label class="close_button" for="toggle_button">X</label>
+    </div>
+    
+     
+</body>
+</html>

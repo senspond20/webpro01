@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #menu {display:inline-block;width:700px;}
+        
+        #menu li {display:inline-block;width:25%;height:33px;float:left;text-align:center;}
+        
+        #menu li ul {display:none;position:absolute;width:400px;margin-top:26px;}
+        
+        #menu li ul li {display:inline-block;width:auto;height:28px;padding:0;text-align:center;}
+        
+        #menu img {border:0px none;}
+        
+        #menu .side {padding:0;}
+        
+        #menu .submenu {padding:5px 8px 0 8px;background:url(서브메뉴 배경) x-repeat;}
+        
+        
+        
+        #menu .submenu1 {margin-left:-100px;}
+        
+        #menu .submenu2 {margin-left:-100px;}
+        
+        #menu .submenu3 {margin-left:-100px;}
+        
+        #menu .submenu4 {margin-left:-100px}
+        
+        </style>
+</head>
+<body>
+    
+  
+        
+        <script language="javascript">
+    
+        //var old_menuid = 메뉴번호;
+        
+        var old_viewid = 0;
+        
+        function menu_view(viewid){
+        
+         if(viewid!=old_viewid){
+          document.getElementById("submenu"+viewid).style.display="block";
+          if(old_viewid!="0")document.getElementById("submenu"+old_viewid).style.display="none";
+          old_viewid = viewid;
+         }
+        
+        }
+        
+        function menu_hide(hideid){
+        
+         document.getElementById("submenu"+hideid).style.display="none";
+        
+         old_viewid = 0;
+        
+        }
+        
+        </script>
+        
+
+        
+        <div id="menu">
+        
+            <ul>
+        
+                <li onmouseover="javascript:menu_view(1);" onmouseout="javascript:menu_hide(1);">
+                    <a href="#"><img src="./common/menu_01.png" alt="1번메뉴"></a>
+                    <ul id="submenu1" class="submenu1" onmouseover="javascript:menu_view(2);" onmouseout="javascript:menu_hide(1);">
+                        <li class="submenu"><a href="#">1-1메뉴</a></li>
+                        <li class="submenu"><a href="#">1-2메뉴</a></li>
+                        <li class="submenu"><a href="#">1-3메뉴</a></li>
+                        <li class="submenu"><a href="#">1-4메뉴</a></li>
+        
+                    </ul>
+        
+                </li>
+        
+                
+        
+                <li onmouseover="javascript:menu_view(2);" onmouseout="javascript:menu_hide(2);">
+                    <a href="#"><img src="./common/menu_02.png" alt="2번메뉴"></a>
+        
+                    <ul id="submenu2" class="submenu2" onmouseout="javascript:menu_hide(2);">
+        
+                        <li class="submenu"><a href="#">2-1메뉴</a></li>
+        
+                        <li class="submenu"><a href="#">2-2메뉴</a></li>
+        
+                        <li class="submenu"><a href="#">2-3메뉴</a></li>
+        
+                        <li class="submenu"><a href="#">2-4메뉴</a></li>
+        
+                    </ul>
+        
+                </li>
+        
+                
+        
+                <li onmouseover="javascript:menu_view(3);" onmouseout="javascript:menu_hide(3);">
+        
+                    <a href="#"><img src="./common/menu_03.png" alt="3번메뉴"></a>
+        
+                    <ul id="submenu3" class="submenu3" onmouseout="javascript:menu_hide(3);">
+        
+                        <li class="submenu"><a href="#">3-1메뉴</a></li>
+                        <li class="submenu"><a href="#">3-2메뉴</a></li>
+                        <li class="submenu"><a href="#">3-3메뉴</a></li>
+                        <li class="submenu"><a href="#">3-4메뉴</a></li>
+        
+                    </ul>
+        
+                </li>
+        
+                
+        
+                <li onmouseover="javascript:menu_view(4);" onmouseout="javascript:menu_hide(4);">
+        
+                    <a href="#"><img src="./common/menu__04.png" alt="4번메뉴"></a>
+        
+                    <ul id="submenu4" class="submenu4" onmouseout="javascript:menu_hide(4);">
+        
+                        <li class="submenu"><a href="#">4-1메뉴</a></li>
+        
+                        <li class="submenu"><a href="#">4-2메뉴</a></li>
+        
+                        <li class="submenu"><a href="#">4-3메뉴</a></li>
+        
+                        <li class="submenu"><a href="#">4-4메뉴</a></li>
+        
+                    </ul>
+        
+                </li>
+        
+            </ul>
+        
+        </div>
+        
+        
+        
+     
+</body>
+</html>
