@@ -1,6 +1,8 @@
 
+// start-window 
 window.onload = function() {menu_view(1),sidemenu_view(1)};
 
+//addEventListener
 document.getElementById('navbar1').addEventListener('click' ,function(){menu_view(1)});
 document.getElementById('navbar1').addEventListener('click' ,function(){sidemenu_view(1)});
 
@@ -16,6 +18,8 @@ document.getElementById('navbar4').addEventListener('click' ,function(){sidemenu
 document.getElementById('navbar5').addEventListener('click' ,function(){menu_view(5)});
 document.getElementById('navbar5').addEventListener('click' ,function(){sidemenu_view(5)});
 
+
+/*======= function ========= */
 var old_viewid = 0;
 var old_sviewid = 0;
 
@@ -45,4 +49,3 @@ function sidemenu_view(viewid){
     
     }*/
 
-      

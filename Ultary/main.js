@@ -1,5 +1,6 @@
 
-window.onload = function() {menu_view(1),sidemenu_view(1)};
+window.onload = function() {menu_view(1),sidemenu_view(1),scrollFunction()};
+window.onscroll = function() {scrollFunction()};
 
 document.getElementById('navbar1').addEventListener('click' ,function(){menu_view(1)});
 document.getElementById('navbar1').addEventListener('click' ,function(){sidemenu_view(1)});
@@ -46,3 +47,21 @@ function sidemenu_view(viewid){
     }*/
 
       
+/* HEADER */
+
+
+function scrollFunction(){
+    var header = document.getElementById('header');
+
+    if(document.documentElement.scrollTop > 70){
+        if(!header.classList.contains('navbar-fixed')){
+            header.classList.add('navbar-fixed');
+            document.getElementsByName('body')[0].style.marginTop = '70px';
+            header.style.display = 'none';
+            setTimeout(function(){
+                header.style.display = 'block';
+            },40);
+        }
+    }
+
+}
